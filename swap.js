@@ -7,7 +7,7 @@ function swapStyleSheet(sheet) {
 
 function loadStylesheet() {
     // Load the saved stylesheet from localStorage, default to 'mainstyle.css' if not set
-    const savedSheet = localStorage.getItem('selectedStylesheet') || 'mainstyle.css';
+    const savedSheet = localStorage.getItem('selectedStylesheet') || '/mainstyle.css';
     swapStyleSheet(savedSheet);
 }
 
@@ -18,9 +18,9 @@ function initiateToggle() {
         toggleButton.addEventListener('click', () => {
             // Check current stylesheet and toggle between 'mainstyle.css' and 'secstyle.css'
             const currentSheet = document.getElementById("pagestyle").getAttribute("href");
-            const newSheet = currentSheet === 'mainstyle.css' 
-                ? 'secstyle.css' 
-                : 'mainstyle.css';
+            const newSheet = currentSheet === '/mainstyle.css' 
+                ? '/secstyle.css' 
+                : '/mainstyle.css';
             swapStyleSheet(newSheet); // Swap the stylesheet and save the decision
         });
     }
