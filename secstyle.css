@@ -116,6 +116,11 @@ button:hover {
     margin-bottom: 2rem;
 }
 
+button:focus{
+    box-shadow: 2px 2px 0px hsl(34, 16%, 74%), -2px -2px 0px hsl(32, 100%, 93%);
+    text-shadow: 0 0 5px hsl(27, 100%, 95%);
+}
+
 #npc {
     display: flex;
     align-items: stretch;
