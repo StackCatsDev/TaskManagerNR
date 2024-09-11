@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="display:none; transition: all;">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New Note</title>
-    <link id="pagestyle" rel="stylesheet" href="../static/styles/mainstyle.css">
+    <link id="pagestyle" rel="stylesheet" href="../TaskManagerNR/mainstyle.css">
 </head>
 <body>
     <div class="container">
@@ -12,11 +12,12 @@
         <input id="noteTitle" type="text" placeholder="add a Title">
         <textarea id="noteInput" placeholder="Write your note here..."></textarea>
         <button id="saveButton">Save Note</button>
-        <a href="../../index.html"><button>exit</button></a>
+        <button id="exitb" onclick="exitb()">exit</button>
         <div id="notesContainer">
         </div>
     </div>
-    <script src="../static/script/scripts.js"></script>
-    <script src="../static/script/swap.js"></script>
+    <script src="./scripts.js"></script>
+    <script src="./swap.js"></script>
+
 </body>
 </html>
