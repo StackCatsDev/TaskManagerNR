@@ -123,4 +123,5 @@ button:hover {
     flex-wrap: wrap;
     gap: 1rem; /* Space between items */
 }
+
 html{display:block !important}
