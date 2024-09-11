@@ -1,3 +1,6 @@
+document.getElementById("pagestyle").setAttribute("href", "./mainstyle.css");
+
+
 function swapStyleSheet(sheet) {
     // Change the stylesheet by updating the href of the link element with id 'pagestyle'
     document.getElementById("pagestyle").setAttribute("href", sheet);
