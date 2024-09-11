@@ -6,6 +6,7 @@ function swapStyleSheet(sheet) {
     document.getElementById("pagestyle").setAttribute("href", sheet);
     // Save the selected stylesheet to localStorage
     localStorage.setItem('selectedStylesheet', sheet);
+    console.log("Theme Swap successful")
 }
 
 function loadStylesheet() {
