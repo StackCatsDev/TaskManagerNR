@@ -7,7 +7,7 @@ function swapStyleSheet(sheet) {
 
 function loadStylesheet() {
     // Load the saved stylesheet from localStorage, default to 'mainstyle.css' if not set
-    const savedSheet = localStorage.getItem('selectedStylesheet') || '../../static/styles/mainstyle.css';
+    const savedSheet = localStorage.getItem('selectedStylesheet') || './static/styles/mainstyle.css';
     swapStyleSheet(savedSheet);
 }
 
@@ -18,7 +18,7 @@ function initiateToggle() {
         toggleButton.addEventListener('click', () => {
             // Check current stylesheet and toggle between 'styles/mainstyle.css' and 'crap.css'
             const currentSheet = document.getElementById("pagestyle").getAttribute("href");
-            const newSheet = currentSheet === "../../static/styles/mainstyle.css" ? "../../static/styles/secstyle.css" : "../../static/styles/mainstyle.css";
+            const newSheet = currentSheet === "./static/styles/mainstyle.css" ? "./static/styles/secstyle.css" : "./static/styles/mainstyle.css";
             swapStyleSheet(newSheet); // Swap the stylesheet and save the decision
         });
     }
