@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('notes', JSON.stringify(savedNotes));
             noteTitle.value = '';
             noteInput.value = '';
-            setTimeout(window.location.replace("./"),1000)
+            setTimeout(window.location.replace("./TaskManagerNR/"),1000)
         }
     };
 
