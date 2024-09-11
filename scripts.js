@@ -32,5 +32,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function exitb(){
-    history.back();
+    window.location.href('./')
 }
