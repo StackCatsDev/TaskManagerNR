@@ -7,17 +7,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadTasks = () => {
         const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         taskList.innerHTML = savedTasks.map((task, index) =>
-            `<li>
-                <span>${task}</span>
+            `<li class= "task-container" data-index="${index}">
+                <span class= "task ${task.done ? 'done' : ''}" >${task.text}</span>
+                <button id="doneB" onclick="done(${index})">Done</button>
                 <button onclick="removeTask(${index})">Remove</button>
             </li>`
         ).join('');
     };
+
     const saveTask = () => {
         const task = taskInput.value.trim();
         if (task) {
             const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-            savedTasks.push(task);
+            savedTasks.push({ text: task, done: false });
             localStorage.setItem('tasks', JSON.stringify(savedTasks));
             taskInput.value = '';
             loadTasks();
@@ -27,6 +29,13 @@ document.addEventListener('DOMContentLoaded', () => {
     window.removeTask = (index) => {
         const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         savedTasks.splice(index, 1);
+        localStorage.setItem('tasks', JSON.stringify(savedTasks));
+        loadTasks();
+    };
+
+    window.done = (index) => {
+        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        savedTasks[index].done = !savedTasks[index].done;
         localStorage.setItem('tasks', JSON.stringify(savedTasks));
         loadTasks();
     };

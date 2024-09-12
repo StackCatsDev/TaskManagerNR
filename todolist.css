@@ -74,21 +74,28 @@ li {
     padding: 10px;
     margin: 10px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 4rem;
     align-items: center;
 }
 
 li button {
     width: auto;
+    margin-top: 5px;
     padding: 5px 10px;
-    background-color: hsl(0, 0%, 85%);
+    background-color: hsla(0, 0%, 100%, 0.4);
     border-radius: 3px;
 }
 
 li button:hover {
-    background-color: hsl(0, 0%, 75%);
+    background-color: hsla(0, 0%, 100%, 0.553);
     box-shadow: 2px 2px 0px hsl(34, 16%, 74%), -2px -2px 0px hsl(32, 100%, 93%);
 }
+
+#taskInput:hover, #taskInput:focus{
+    box-shadow: inset 2px 2px 0px hsl(34, 16%, 74%), 2px 2px 0px hsl(32, 100%, 93%);
+}
+
 
 .title {
     margin-bottom: 2rem;
@@ -97,4 +104,24 @@ li button:hover {
 #clearTasksButton {
     margin-top: 20px;
     padding: 10px 40px;
+}
+
+.task-container{
+    background-color: hsl(31, 59%, 88%);
+    box-shadow: inset 2px 2px 0px hsl(32, 100%, 93%), 2px 2px 0px hsl(34, 16%, 74%);
+    border-radius: 10px;
+    margin: auto;
+    padding: 8px; 
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+.task.done{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: green;
+}
+
+#doneB{
+    transform: translateY(0.2rem);
+    transform: translateX(3rem);
 }
