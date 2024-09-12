@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `<li class= "task-container" data-index="${index}">
                 <span class= "task ${task.done ? 'done' : ''}" >${task.text}</span>
                 <button id="doneB" onclick="done(${index})">	&#x2714;</button>
-                <button onclick="removeTask(${index})">Remove</button>
+                <button id="remB" onclick="removeTask(${index})">Remove</button>
             </li>`
         ).join('');
     };

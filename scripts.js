@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('notes', JSON.stringify(savedNotes));
             noteTitle.value = '';
             noteInput.value = '';
-            setTimeout(window.location.replace("./"), 1000);
+            setTimeout(window.location.replace("./notes.html"), 1000);
         }
     };
 
@@ -25,12 +25,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
         savedNotes.splice(index, 1);
         localStorage.setItem('notes', JSON.stringify(savedNotes));
-        setTimeout(window.location.replace("./"), 1000);
+        setTimeout(window.location.replace("./notes.html"), 1000);
     };
 });
 
 
 
 function exitb(){
-    window.location.replace("./")
+    window.location.replace("./notes.html")
 }
