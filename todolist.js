@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.innerHTML = savedTasks.map((task, index) =>
             `<li class= "task-container" data-index="${index}">
                 <span class= "task ${task.done ? 'done' : ''}" >${task.text}</span>
-                <button id="doneB" onclick="done(${index})">Done</button>
+                <button id="doneB" onclick="done(${index})">	&#x2714;</button>
                 <button onclick="removeTask(${index})">Remove</button>
             </li>`
         ).join('');
