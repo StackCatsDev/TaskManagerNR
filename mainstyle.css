@@ -116,14 +116,15 @@ button:hover,button:focus {
     margin-right: auto;
 
 
-  }
-  .MotCardmessage {
+}
+
+.MotCardmessage {
     color: #000;
     font-size: 0.9rem;
     line-height: 1.4;
     font-weight: 600;
-  }
-  
+}
+
 
 
 /*---------------------------------------------*/
