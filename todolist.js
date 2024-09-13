@@ -3,12 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const addTaskButton = document.getElementById('addTaskButton');
     const taskList = document.getElementById('taskList');
     const clearTasksButton = document.getElementById('clearTasksButton');
+    const isUrgentCheckbox = document.getElementById('isUrgent');
 
     const loadTasks = () => {
         const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
         taskList.innerHTML = savedTasks.map((task, index) =>
-            `<li class= "task-container" data-index="${index}">
-                <span class= "task ${task.done ? 'done' : ''}" >${task.text}</span>
+            `<li class="task-container ${task.urgent ? 'urgent' : ''}" data-index="${index}">
+                <span class="task ${task.done ? 'done' : ''}">${task.text}</span>
                 <button id="doneB" onclick="done(${index})">	&#x2714;</button>
                 <button id="remB" onclick="removeTask(${index})">Remove</button>
             </li>`
@@ -19,9 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const task = taskInput.value.trim();
         if (task) {
             const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-            savedTasks.push({ text: task, done: false });
+            const newTask = { text: task, done: false, urgent: isUrgentCheckbox.checked };
+            
+            if (newTask.urgent) {
+                savedTasks.unshift(newTask);
+            } else {
+                savedTasks.push(newTask);
+            }
+
             localStorage.setItem('tasks', JSON.stringify(savedTasks));
             taskInput.value = '';
+            isUrgentCheckbox.checked = false;
             loadTasks();
         }
     };
