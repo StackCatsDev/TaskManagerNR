@@ -1,3 +1,5 @@
+// this is for the motivational notes..:)
+
 const quotes = [
     "Believe in yourself and all that you are.",
     "Success is not final, failure is not fatal: It is the courage to continue that counts.",
@@ -35,6 +37,6 @@ function getRandomQuote() {
 document.addEventListener('DOMContentLoaded', () => {
     const displayableQuote = getRandomQuote();
     console.log(displayableQuote);
-    document.getElementById('MotNotes').innerText = displayableQuote;
+    document.getElementById('motNotes').innerText = displayableQuote;
 
 });
