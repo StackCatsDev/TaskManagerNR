@@ -98,10 +98,12 @@ li button:hover {
 #taskInput{
     margin-bottom: auto;
     margin-top: 2rem;
-    min-width: 22.5rem;
-    max-width: 36.2rem;
-    margin-right: 2rem;
+    padding-right: 1rem;
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
 }
+
 
 #taskInput:hover, #taskInput:focus{
     background-color: #caf0f8;
@@ -119,22 +121,28 @@ li button:hover {
     padding: 10px 40px;
 }
 
-.task-container{
+.task-container {
     background-color: #caf0f8;
     border-radius: 7px;
     outline: none;
     margin: auto;
-    padding: 8px; 
+    padding: 8px;
     margin-bottom: 2rem;
     box-sizing: border-box;
     border-width: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .task-container:hover{
     box-shadow: inset 1px 1px 0px hsl(180, 100%, 93%), 1px 1px 0px hsl(197, 42%, 50%);
 }
 
-.task{
+
+.task {
+    padding-left: 0.5rem;
     color: hsl(0, 0%, 20%);
 }
 
@@ -144,14 +152,19 @@ li button:hover {
     color: green;
 }
 
+.taskButtons {
+    padding-right: 0.2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+
 #doneB:hover, #remB:hover{
     box-shadow: inset 2px 2px 0px hsl(180, 100%, 93%), 2px 2px 0px hsl(0, 0%, 62%);
 }
 #doneB{
     color: rgb(48, 233, 110);
     background: linear-gradient(0deg, rgb(198, 255, 204) 35%, rgb(255, 242, 242) 100%);
-    transform: translateY(0.2rem);
-    transform: translateX(3rem);
 }
 
 #remB{
@@ -222,4 +235,12 @@ input[type="checkbox"]:checked{
     border-color: hsl(0, 0%, 100%);
     border-style: solid;
     box-shadow: 0 0 10px #33c4e1;
+}
+
+
+@media (max-width: 600px) {
+    html {
+        overflow-x: hidden;
+    }
+
 }
