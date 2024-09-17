@@ -37,5 +37,3 @@ document.addEventListener('DOMContentLoaded', () => {
 function exitb(){
     window.location.replace("./notes.html")
 }
-
-
