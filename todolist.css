@@ -1,3 +1,5 @@
+
+
 html {
     box-shadow: inset 0 0 10px #48cae4;
     animation: anim 2s infinite;
@@ -111,6 +113,9 @@ li button:hover {
     
 }
 
+button:focus{
+    animation: rubberBand 1s;
+}
 
 .title {
     margin-bottom: 2rem;
@@ -136,6 +141,7 @@ li button:hover {
     align-items: center;
 }
 
+
 .task-container:hover{
     box-shadow: inset 1px 1px 0px hsl(180, 100%, 93%), 1px 1px 0px hsl(197, 42%, 50%);
 }
@@ -156,12 +162,19 @@ li button:hover {
     padding-right: 0.2rem;
     display: flex;
     gap: 0.5rem;
+
 }
 
 
 #doneB:hover, #remB:hover{
     box-shadow: inset 2px 2px 0px hsl(180, 100%, 93%), 2px 2px 0px hsl(0, 0%, 62%);
 }
+
+#doneB:focus, #remB:focus{
+    box-shadow: inset 2px 2px 0px hsl(180, 100%, 93%), 2px 2px 0px hsl(0, 0%, 62%);
+    animation: tada 1s;
+}
+
 #doneB{
     color: rgb(48, 233, 110);
     background: linear-gradient(0deg, rgb(198, 255, 204) 35%, rgb(255, 242, 242) 100%);
@@ -242,5 +255,4 @@ input[type="checkbox"]:checked{
     html {
         overflow-x: hidden;
     }
-
 }

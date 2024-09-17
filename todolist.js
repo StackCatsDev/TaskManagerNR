@@ -38,17 +38,21 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.removeTask = (index) => {
-        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        savedTasks.splice(index, 1);
-        localStorage.setItem('tasks', JSON.stringify(savedTasks));
-        loadTasks();
+        setTimeout(() => {
+            const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            savedTasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(savedTasks));
+            loadTasks();
+        }, 500);
     };
 
     window.done = (index) => {
-        const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-        savedTasks[index].done = !savedTasks[index].done;
-        localStorage.setItem('tasks', JSON.stringify(savedTasks));
-        loadTasks();
+        setTimeout(() => {
+            const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            savedTasks[index].done = !savedTasks[index].done;
+            localStorage.setItem('tasks', JSON.stringify(savedTasks));
+            loadTasks();
+        }, 500);
     };
 
     clearTasksButton.addEventListener('click', () => {

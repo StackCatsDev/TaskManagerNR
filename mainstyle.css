@@ -75,10 +75,17 @@ button {
     margin-right: 0.5rem;
 }
 
-button:hover,button:focus {
+button:hover {
     box-shadow: 1px 1px 0px #0077b6, -1px -1px 0px #e3faff;
     text-shadow: 1px 1px 0px #000000;
 }
+
+button:focus{
+    box-shadow: 1px 1px 0px #0077b6, -1px -1px 0px #e3faff;
+    text-shadow: 1px 1px 0px #000000;
+    animation: rubberBand 1s;
+}
+
 
 .note {
     background: #fff;

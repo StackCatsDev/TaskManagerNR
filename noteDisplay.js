@@ -17,10 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Remove note function
     window.removeNoteInDisplay = (index) => {
-        const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
-        savedNotes.splice(index, 1);
-        localStorage.setItem('notes', JSON.stringify(savedNotes));
-        loadNotes();
+        setTimeout(() => {
+            const savedNotes = JSON.parse(localStorage.getItem('notes')) || [];
+            savedNotes.splice(index, 1);
+            localStorage.setItem('notes', JSON.stringify(savedNotes));
+            loadNotes();
+        }, 500);
     };
 });
 
