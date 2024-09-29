@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link id="pagestyle" rel="stylesheet" href="todolist.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">To-Do List</h1>
+        <input id="taskInput" maxlength="30" type="text" placeholder="Add a new task">
+        
+        <div class="priorityContainer">
+            <input type="date" id="dueDate">
+            <input type="checkbox" id="isUrgent">
+            <label id="isUrgentLable" for="isUrgent">High-Priority</label>
+    
+        </div>
+
+        <button id="addTaskButton">Add Task</button>
+
+        <ul id="taskList">
+        </ul>
+
+        <button id="clearTasksButton">Clear All Tasks</button>
+
+        <a href="index.html"><button>Exit</button></a>
+    </div>
+<script src="todolist.js"></script>
+</body>
+</html>

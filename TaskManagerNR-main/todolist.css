@@ -1,0 +1,309 @@
+
+
+html {
+    box-shadow: inset 0 0 10px #48cae4;
+    animation: anim 2s infinite;
+    min-height: 100vh; 
+    transition: 2500ms;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes anim {
+    50% {
+        box-shadow: inset 0 0 30px #ffffff;
+    }
+}
+
+body {
+    padding-top: 5rem;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    margin: 0;
+    background: #2980B9;
+    background: linear-gradient(
+    to right,
+    #1e92df,#6DD5FA,#beedff);
+    color: #ffffff;
+    min-height: 100vh; 
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 2rem; 
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 7%);
+    border: none;
+    border-radius: 5px;
+    background-color: #caf0f8;
+    outline: none;
+    transition: 250ms;
+}
+
+button {
+    cursor: pointer;
+    font-weight: bold;
+    color: hsl(190, 74%, 54%);
+    background: linear-gradient(0deg, rgb(195, 242, 255) 35%, rgb(255, 255, 255) 100%);
+    border-radius: 5px;
+    transition: 500ms;
+}
+
+button:hover {
+    box-shadow: 1px 1px 0px #0077b6, -1px -1px 0px #e3faff;
+    text-shadow: 1px 1px 0px #000000;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    align-items: center;
+}
+
+li button {
+    width: auto;
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: hsla(0, 0%, 100%, 0.4);
+    border-radius: 3px;
+}
+
+li button:hover {
+    background-color: hsla(0, 0%, 100%, 0.553);
+    box-shadow: 2px 2px 0px hsl(34, 16%, 74%), -2px -2px 0px hsl(32, 100%, 93%);
+}
+
+#taskInput{
+    margin-bottom: auto;
+    margin-top: 2rem;
+    padding-right: 1rem;
+    width: 100%;
+    margin-right: 0;
+    box-sizing: border-box;
+}
+
+
+#taskInput:hover, #taskInput:focus{
+    background-color: #caf0f8;
+    box-shadow: inset 2px 2px 0px hsl(0, 0%, 90%), 1px 1px 0px hsl(0, 0%, 25%);
+    
+}
+
+button:focus{
+    animation: rubberBand 1s;
+}
+
+.title {
+    margin-bottom: 2rem;
+}
+
+#clearTasksButton {
+    margin-top: 20px;
+    padding: 10px 40px;
+}
+
+.task-container {
+    background-color: #caf0f8;
+    border-radius: 7px;
+    outline: none;
+    margin: auto;
+    padding: 8px;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+    border-width: 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.task-container:hover{
+    box-shadow: inset 1px 1px 0px hsl(180, 100%, 93%), 1px 1px 0px hsl(197, 42%, 50%);
+}
+
+
+.task {
+    padding-left: 0.5rem;
+    color: hsl(0, 0%, 20%);
+}
+
+.task.done{
+    text-decoration: line-through;
+    font-weight: bold;
+    color: green;
+}
+
+.taskButtons {
+    padding-right: 0.2rem;
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+
+#doneB:hover, #remB:hover{
+    box-shadow: inset 2px 2px 0px hsl(180, 100%, 93%), 2px 2px 0px hsl(0, 0%, 62%);
+}
+
+#doneB:focus, #remB:focus{
+    box-shadow: inset 2px 2px 0px hsl(180, 100%, 93%), 2px 2px 0px hsl(0, 0%, 62%);
+    animation: tada 1s;
+}
+
+#doneB{
+    color: rgb(48, 233, 110);
+    background: linear-gradient(0deg, rgb(198, 255, 204) 35%, rgb(255, 242, 242) 100%);
+}
+
+#remB{
+    color: rgb(255, 59, 59);
+    background: linear-gradient(0deg, rgb(255, 198, 198) 35%, rgb(255, 242, 242) 100%);
+    padding-top: 0.5rem;
+    padding-bottom: 0.3rem;
+}
+
+#clearTasksButton{
+    margin-top: 5rem;
+}
+
+.urgent{
+    background-color: #f8caca;
+    border-color: hsl(0, 100%, 65%);
+    border-width: 0.1rem;
+    border-style: solid;
+    box-shadow: inset 0 0 20px rgb(255, 162, 162);
+
+    border-radius: 7px;
+    outline: none;
+    margin: auto;
+    padding: 8px; 
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.urgent:hover{
+    background-color: #f8caca;
+    border-color: hsl(0, 100%, 65%);
+    border-width: 0.1rem;
+    border-style: solid;
+    box-shadow: inset 0 0 20px rgb(255, 162, 162);
+}
+
+
+#isUrgentLable{
+    float: right;
+    transform: translateY(-1.8rem);
+    color: hsl(190, 74%, 54%);
+    font-weight: bold;
+    margin-right: 0.5rem;
+
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    float: right;
+    margin-right: 0.5rem;
+
+    transform: translateY(-2.2rem);
+
+    background-color: #fff;
+    outline: #33c4e1;
+    outline-width: 0.1rem;
+    outline-style: solid;
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 0.15em;
+    border-color: hsl(0, 0%, 100%);
+    border-style: solid;
+    border-radius: 0.6rem;
+}
+
+input[type="checkbox"]:checked{
+    background-color: #33c4e1;
+    border-color: hsl(0, 0%, 100%);
+    border-style: solid;
+    box-shadow: 0 0 10px #33c4e1;
+}
+input[type="date"] {
+    appearance: none;
+    margin-right: 0rem;
+    transform: translateY(-2.2rem);
+    background-color: #fff;
+    outline: #33c4e1;
+    outline-width: 0.1rem;
+    outline-style: solid;
+    width: 6rem; /* Adjust width as needed */
+    height: 0.6rem;
+    border-radius: 0.6rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    color: hsl(194, 77%, 65%);
+    border-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 0px hsl(0, 0%, 90%);
+}
+input[type="date"]:focus {
+    background-color: #2e98ad;
+    box-shadow: inset 2px 2px 0px hsl(212, 19%, 37%), 1px 1px 0px hsl(0, 0%, 25%);
+}
+.overdue {
+    color: white;
+    background-color: rgb(219, 86, 86);
+    padding: 5px;
+    border-radius: 5px;
+    animation: wobble 1s ease-in-out;
+}
+
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-2deg); }
+    50% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+    100% { transform: rotate(0deg); }
+}
+.overdue {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.task.done {
+    text-decoration: line-through;
+    color: grey;
+}
+
+
+.priorityContainer{
+    display:inline-flex;
+    gap: 0rem
+}
+@media (max-width: 600px) {
+    html {
+        overflow-x: hidden;
+    }
+}
